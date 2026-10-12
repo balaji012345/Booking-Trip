@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookMyTrip - Travel Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">bookmy<span>trip.</span></div>
+
+        <div class="support">
+            📞 Call 24/7 Support
+            <br>
+            +91 (44) 1234 5678
+        </div>
+
+        <div class="search-box">
+            <input type="search" placeholder="Search entire website here">
+            <button aria-label="Search">⌕</button>
+        </div>
+
+        <div class="account">
+            <button>Sign Up</button>
+            <button>My Account</button>
+        </div>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#">Home</a>
+            <a href="#hotels">Hotels</a>
+            <a href="#">Flights</a>
+            <a href="#">Vacations</a>
+            <a href="#deals">Hot Deals</a>
+            <a href="#">Travel Guides</a>
+            <a href="#">Blogs</a>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+            <h1>Paris Hilton Hotel, Mumbai, India</h1>
+
+            <p>
+                Experience luxury and comfort with stunning
+                sea views and unforgettable service.
+            </p>
+
+            <h2>₹12,000 <small>Inclusive of food and dinner</small></h2>
+        </div>
+
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking">
+
+        <h3>Book Your Trip</h3>
+
+        <form id="bookingForm">
+
+            <div class="form-group">
+                <label for="hotelType">What?</label>
+                <select id="hotelType">
+                    <option value="Hotels">Hotels</option>
+                    <option value="Resorts">Resorts</option>
+                    <option value="Villas">Villas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Where?</label>
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Location"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="checkin">When?</label>
+                <input type="date" id="checkin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rooms">Rooms</label>
+                <select id="rooms">
+                    <option>1 Room</option>
+                    <option>2 Rooms</option>
+                    <option>3 Rooms</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="adults">Adults</label>
+                <select id="adults">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="children">Children</label>
+                <select id="children">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+            <button type="submit" class="search-btn">SEARCH</button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+    <!-- Popular Hotels -->
+    <section class="section" id="hotels">
+
+        <div class="section-heading">
+            <h2>Popular Hotels</h2>
+
+            <div class="arrows">
+                <button id="prevBtn" aria-label="Previous hotels">❮</button>
+                <button id="nextBtn" aria-label="Next hotels">❯</button>
+            </div>
+        </div>
+
+        <div class="hotel-container" id="hotelContainer">
+
+            <article class="hotel-card">
+                <img
+                    src="images/images (2).jpg"
+                    alt="Hotel Taj Mahal Palace"
+                >
+
+                <div class="hotel-details">
+                    <h3>Hotel Taj Mahal Palace</h3>
+                    <p>Mumbai, India</p>
+                    <span class="price">₹2,000</span>
+                    <button class="book-btn" data-location="Mumbai">
+                        Book Now
+                    </button>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                <img
+                    src="images/images (3).jpg"
+                    alt="Mont Blanc Resort"
+                >
+
+                <div class="hotel-details">
+                    <h3>Mont Blanc</h3>
+                    <p>Zurich, Switzerland</p>
+                    <span class="price">₹3,200</span>
+                    <button class="book-btn" data-location="Switzerland">
+                        Book Now
+                    </button>
+                </div>
+            </article>
+
+            <article class="hotel-card">
+                <img
+                    src="images/images (1).jpg"
+                    alt="Hotel Marriott"
+                >
+
+                <div class="hotel-details">
+                    <h3>Hotel Marriott</h3>
+                    <p>Melbourne, Australia</p>
+                    <span class="price">₹1,200</span>
+                    <button class="book-btn" data-location="Australia">
+                        Book Now
+                    </button>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- Hot Deals -->
+    <section class="section" id="deals">
+
+        <h2>Hot Deals</h2>
+
+        <div class="deal-container">
+
+            <div class="deal-card deal-one">
+                <span class="discount">30% OFF</span>
+
+                <div class="deal-text">
+                    <h2>PARIS EUROSTAR BREAKS</h2>
+                    <p>Explore beautiful holiday destinations.</p>
+                    <button class="deal-btn">Book Now →</button>
+                </div>
+            </div>
+
+            <div class="deal-card deal-two">
+                <span class="discount">25% OFF</span>
+
+                <div class="deal-text">
+                    <h2>MALDIVES SPECIAL</h2>
+                    <p>Luxury stay with ocean views.</p>
+                    <button class="deal-btn">Book Now →</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Latest Blogs -->
+    <section class="blogs">
+        <h3>Latest Blogs</h3>
+        <p>Best places to visit in India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <a href="#">About the company</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+            <a href="#">Booking Guide</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <p>Facebook · Instagram · YouTube</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Don't miss our deals and offers</h3>
+
+            <form id="subscribeForm">
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email id"
+                    required
+                >
+                <button type="submit">Subscribe</button>
+            </form>
+
+            <p id="subscribeMessage"></p>
+        </div>
+
+        <p class="copyright">
+            © 2026 BookMyTrip. All rights reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
